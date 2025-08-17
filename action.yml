@@ -1,0 +1,29 @@
+name: Telegram sender markdownV2 specific
+description: Enter the GitHub markdown message and it will automatically convert it to the markdownv2 format compatible with Telegram for you
+color: blue
+icon: message-circle
+inputs:
+  bot-token:
+    description: 'Telegram Bot Token'
+    required: true
+  chat-id:
+    description: 'Telegram chat ID'
+    required: true
+  message:
+    description: 'Message to send'
+    required: true
+  parse-mode:
+    description: 'Message parse mode: MarkdownV2, HTML, etc.'
+    required: false
+    default: 'MarkdownV2'
+outputs:
+  response:
+    description: 'Telegram API response'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.bot-token }}
+    - ${{ inputs.chat-id }}
+    - ${{ inputs.message }}
+    - ${{ inputs.parse-mode }}

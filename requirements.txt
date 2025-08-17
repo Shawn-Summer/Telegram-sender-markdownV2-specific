@@ -1,0 +1,2 @@
+python-telegram-bot==22.1
+md2tgmd==0.3.10
