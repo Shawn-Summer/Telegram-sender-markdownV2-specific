@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: send to telegram
-            uses: Shawn-Summer/Telegram-sender-markdownV2-specific@v1
+            uses: Shawn-Summer/Telegram-sender-markdown@v1
             with:
             bot-token: ${{ secrets.TG_BOT_TOKEN }}
             chat-id: ${{ secrets.TG_USER_ID }}
