@@ -1,4 +1,4 @@
-name: Telegram sender markdownV2 specific
+name: Telegram sender markdown
 description:  send telegram message in GitHub Markdown
 icon: message-circle
 inputs:
